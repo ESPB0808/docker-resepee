@@ -17,7 +17,11 @@ RUN apt-get update && apt-get install -y libglib2.0-0 libsm6 libxrender1 libxext
 
 RUN apt-get update && apt-get install -y libgl1-mesa-glx
 
+# CPU-ONLY
 RUN pip install torch==2.3.1+cpu torchvision==0.18.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
+
+# GPU
+# RUN pip install torch==2.3.1 torchvision==0.18.1 -f https://download.pytorch.org/whl/torch_stable.html
 
 RUN pip install -r requirements.txt
 

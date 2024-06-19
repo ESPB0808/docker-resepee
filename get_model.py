@@ -5,10 +5,10 @@ import io
 
 def get_yolov5():
     # local
-    # model = torch.hub.load('./yolov5', 'custom', path='./model/weights2/last.pt', source='local')
+    model = torch.hub.load('./yolov5', 'custom', path='./model/weights3/best.pt', source='local')
     
     # online
-    model = torch.hub.load('ultralytics/yolov5', 'custom', path='./model/weights2/last.pt', force_reload=True)
+    # model = torch.hub.load('ultralytics/yolov5', 'custom', path='./model/weights2/last.pt', force_reload=True)
 
     # threshold
     # model.conf = 0.5
